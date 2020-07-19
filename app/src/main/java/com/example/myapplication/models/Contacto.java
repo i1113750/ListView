@@ -18,15 +18,17 @@ public class Contacto {
     public String FirstName;
     public String LastName;
     public String Phone;
-    public Contacto(String _FirstName, String _LastName, String _Phone){
+    public String urlImage;
+    public Contacto(String _FirstName, String _LastName, String _Phone,String _urlImage){
         this.FirstName=_FirstName;
         this.LastName=_LastName;
         this.Phone=_Phone;
+        this.urlImage=_urlImage;
     }
     public static ArrayList getCollection() {
         ArrayList<Contacto> collection= new ArrayList<>();
-        collection.add(new Contacto("Yerry","Rodriguez","954059603"));
-        collection.add(new Contacto("Jamil","Hurtado","97865412"));
+        collection.add(new Contacto("Yerry","Rodriguez","954059603","avatar"));
+        collection.add(new Contacto("Jamil","Hurtado","97865412","avatar"));
         return collection;
     }
     public static void injectContactsFromCloud(final QueueUtils.QueueObject o,
@@ -47,7 +49,7 @@ public class Contacto {
                                 for (int i=0; i < list.length(); i++) {
                                     JSONObject o = list.getJSONObject(i);
                                     contactos.add(new Contacto(o.getString("first_name"),
-                                            o.getString("last_name"), o.getString("created_at")));
+                                            o.getString("last_name"), o.getString("created_at"), o.getString("avatar")));
                                 }
 
                             } catch (JSONException e) {
