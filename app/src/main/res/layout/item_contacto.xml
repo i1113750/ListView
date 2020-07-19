@@ -3,27 +3,37 @@
    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="10dp"
         android:paddingLeft="20dp"
         android:paddingBottom="10dp">
-        <TextView
-            android:id="@+id/FirstName"
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/image"
+            android:layout_width="43dp"
+            android:layout_height="43dp">
+        </com.android.volley.toolbox.NetworkImageView>
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="PrimerNombre"/>
-        <TextView
-            android:id="@+id/LastName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Segundo No,bre"/>
-        <TextView
-            android:id="@+id/Phone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="FONO"/>
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/FirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PrimerNombre"/>
+            <TextView
+                android:id="@+id/LastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Segundo No,bre"/>
+            <TextView
+                android:id="@+id/Phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FONO"/>
+        </LinearLayout>
 
     </LinearLayout>
 </LinearLayout>
