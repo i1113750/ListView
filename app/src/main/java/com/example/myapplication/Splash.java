@@ -14,7 +14,7 @@ public class Splash extends AppCompatActivity {
             super.onCreate(saveInstanceState);
     Intent o =new Intent(this, ProductosActivity.class);
     try {
-        TimeUnit.SECONDS.sleep (5);
+        TimeUnit.SECONDS.sleep (3);
             } catch (InterruptedException e) {
         e.printStackTrace();
     }
